@@ -15,21 +15,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> myTabs = const [
-    MyTab(
-      iconPath: 'assets/icons/donut.png',
-    ),
-    MyTab(
-      iconPath: 'assets/icons/burger.png',
-    ),
-    MyTab(
-      iconPath: 'assets/icons/smoothie.png',
-    ),
-    MyTab(
-      iconPath: 'assets/icons/pancakes.png',
-    ),
-    MyTab(
-      iconPath: 'assets/icons/pizza.png',
-    ),
+    MyTab(iconPath: 'assets/icons/donut.png'),
+    MyTab(iconPath: 'assets/icons/burger.png'),
+    MyTab(iconPath: 'assets/icons/smoothie.png'),
+    MyTab(iconPath: 'assets/icons/pancakes.png'),
+    MyTab(iconPath: 'assets/icons/pizza.png'),
   ];
   @override
   Widget build(BuildContext context) {
@@ -40,29 +30,17 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: Padding(
-            padding: const EdgeInsets.only(
-              left: 24.0,
-            ),
+            padding: const EdgeInsets.only(left: 24.0),
             child: IconButton(
-              icon: Icon(
-                Icons.menu,
-                color: Colors.grey[800],
-                size: 36,
-              ),
+              icon: Icon(Icons.menu, color: Colors.grey[800], size: 36),
               onPressed: () {},
             ),
           ),
           actions: [
             Padding(
-              padding: const EdgeInsets.only(
-                right: 24.0,
-              ),
+              padding: const EdgeInsets.only(right: 24.0),
               child: IconButton(
-                icon: Icon(
-                  Icons.person,
-                  color: Colors.grey[800],
-                  size: 36,
-                ),
+                icon: Icon(Icons.person, color: Colors.grey[800], size: 36),
                 onPressed: () {},
               ),
             ),
@@ -71,23 +49,16 @@ class _HomePageState extends State<HomePage> {
         body: Column(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(
-                horizontal: 36.0,
-                vertical: 18.0,
-              ),
+              padding: EdgeInsets.symmetric(horizontal: 36.0, vertical: 18.0),
               child: Row(
                 children: [
                   Text(
                     'I want to eat this food !!!',
-                    style: TextStyle(
-                      fontSize: 24,
-                    ),
+                    style: TextStyle(fontSize: 24),
                   ),
-                  SizedBox(
-                    width: 8,
-                  ),
+                  SizedBox(width: 8),
                   Text(
-                    'EAT',
+                    'EAT That food !!',
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
@@ -97,13 +68,8 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            SizedBox(
-              height: 24,
-            ),
-            TabBar(
-              tabs: myTabs,
-              dividerColor: Colors.transparent,
-            ),
+            SizedBox(height: 24),
+            TabBar(tabs: myTabs, dividerColor: Colors.transparent),
             Expanded(
               child: TabBarView(
                 children: [
@@ -130,12 +96,7 @@ class MyTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Tab(
       height: 80,
-      child: Container(
-        child: Image.asset(
-          iconPath,
-          color: Colors.grey[600],
-        ),
-      ),
+      child: Container(child: Image.asset(iconPath, color: Colors.grey[600])),
     );
   }
 }
